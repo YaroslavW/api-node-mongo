@@ -4,16 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "lint-me":"eslint .",
+    "start": "nodemonй index.js",
+    "lint-me": "eslint .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Yaroslav",
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^5.12.0"
+    "eslint": "^5.12.0",
+    "nodemon": "^1.18.9"
   },
   "dependencies": {
+    "body-parser": "^1.18.3",
     "express": "^4.16.4"
   }
 }
