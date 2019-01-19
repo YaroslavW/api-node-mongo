@@ -29,6 +29,13 @@ app.put('/products/:id',(req, res) => {
     const productIndex = products.indexOf(product)
     const newProduct = { ...product, ...req.body}
     products[productIndex] = newProduct
+    res.send(newProduct)
+})
+
+app.delete('/products/:id', (req, res) => {
+    const product = products.find(p => p.id === +req.params.id)
+    const productIndex = products.indexOf(product)  
+    products.splice(productIndex, 1) 
     res.send({ success: true })
 })
 // eslint-disable-next-line
