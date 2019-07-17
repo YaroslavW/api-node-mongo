@@ -27,7 +27,7 @@ app.get('/products', (req, res)=> res.json(products))
 app.put('/products/:id',(req, res) => {
     const product = products.find(p => p.id === +req.params.id)
     const productIndex = products.indexOf(product)
-    const newProduct = { ...product, ...req.body}
+    const newProduct = { ...product, ...req.body };
     products[productIndex] = newProduct
     res.send(newProduct)
 })
